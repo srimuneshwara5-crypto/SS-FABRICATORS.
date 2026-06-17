@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>SS FABRICATORS | Iron & Steel Fabrication Bangalore</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fb;
+      color: #1e2a3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: #0b2b26;
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #f5b042;
+    }
+    .logo p {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      color: #cddde0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #f5b042;
+    }
+    .contact-quick {
+      background: #f5b042;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-weight: 700;
+      color: #0b2b26;
+    }
+    .contact-quick:hover {
+      background: #ffc55a;
+      color: #0b2b26;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(105deg, #0f2f2a 0%, #1a3f3a 100%);
+      color: white;
+      padding: 70px 0 80px;
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hero-text {
+      flex: 1.4;
+    }
+    .hero-text .badge {
+      background: #f5b04222;
+      backdrop-filter: blur(4px);
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      border: 1px solid #f5b04280;
+      margin-bottom: 20px;
+    }
+    .hero-text h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      color: #e0e7e7;
+      max-width: 550px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #f5b042;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      color: #0b2b26;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: #ffc864;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 2px solid #f5b042;
+      padding: 10px 26px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline:hover {
+      background: #f5b04220;
+    }
+    .hero-stats {
+      flex: 1;
+      background: rgba(255,255,240,0.05);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 32px;
+      text-align: center;
+    }
+    .owner-card {
+      background: white;
+      color: #1e2a3e;
+      border-radius: 24px;
+      padding: 18px;
+      margin-top: 20px;
+    }
+    .owner-card i {
+      color: #f5b042;
+      margin-right: 8px;
+    }
+
+    /* Services */
+    .section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #0b2b26;
+    }
+    .section-sub {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px auto;
+      color: #4b5e6c;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: all 0.25s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      border: 1px solid #eef2f0;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+      border-color: #f5b04260;
+    }
+    .service-icon {
+      font-size: 2.8rem;
+      color: #f5b042;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: #4a5b6b;
+      font-size: 0.9rem;
+    }
+
+    /* Why us */
+    .whyus {
+      background: #fef6e8;
+    }
+    .flex-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .feature {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+    }
+    .feature i {
+      font-size: 2.4rem;
+      color: #f5b042;
+    }
+
+    /* Contact & Map */
+    .contact-section {
+      background: #0b2b26;
+      color: #f0f3f2;
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      justify-content: space-between;
+    }
+    .contact-info {
+      flex: 1.2;
+    }
+    .contact-info h3 {
+      font-size: 1.8rem;
+      color: #f5b042;
+      margin-bottom: 20px;
+    }
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .info-row i {
+      width: 40px;
+      font-size: 1.5rem;
+      color: #f5b042;
+    }
+    .info-row a {
+      color: #f5b042;
+      text-decoration: none;
+    }
+    .info-row a:hover {
+      text-decoration: underline;
+    }
+    .map-placeholder {
+      flex: 1;
+      background: #1e4a42;
+      border-radius: 28px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+    .map-frame {
+      width: 100%;
+      border-radius: 20px;
+      border: 0;
+      height: 280px;
+      margin-bottom: 16px;
+    }
+    .btn-map {
+      background: #f5b042;
+      color: #0b2b26;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+      margin-top: 8px;
+    }
+    .btn-map:hover {
+      background: #ffc864;
+      transform: scale(1.02);
+    }
+    .address-highlight {
+      background: #153e38;
+      border-radius: 20px;
+      padding: 16px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #07221e;
+      color: #bcd0cc;
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 780px) {
+      .nav-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.9rem;
+      }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      z-index: 99;
+      transition: 0.2s;
+    }
+    .whatsapp-float:hover {
+      background: #20b858;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">
+      <h1>SS FABRICATORS</h1>
+      <p>Iron & Steel Masters | Since 2005</p>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#whyus">Expertise</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="contact-quick"><i class="fas fa-phone-alt"></i> Call Now</a>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="badge"><i class="fas fa-industry"></i> Premium Iron Fabrication</div>
+      <h2>Strength & Elegance <br>in Every Weld</h2>
+      <p>Premium S.S. Railings, Ornamental Gates, Rolling Shutters, Truss Works & more. Over a decade of trust in Bangalore.</p>
+      <div class="btn-group">
+        <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> Get Quote</a>
+        <a href="tel:9620712222" class="btn-outline"><i class="fas fa-phone"></i> 9620712222</a>
+      </div>
+      <div class="owner-card">
+        <i class="fas fa-user-tie"></i> <strong>Owner: K. Shiva</strong> 
+        <span style="margin-left: 12px;"><i class="fas fa-map-marker-alt"></i> J.P. Nagar 8th Phase, Bangalore</span>
+        <div style="margin-top: 8px; font-size:0.85rem;"><i class="fas fa-clock"></i> Mon-Sat: 9AM – 7PM</div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <i class="fas fa-building" style="font-size: 2rem; color:#f5b042;"></i>
+      <h3 style="margin: 10px 0 6px;">25+ Years Combined Experience</h3>
+      <p>Precision fabrication & on-time erection</p>
+      <hr style="margin: 18px 0; border-color:#ffffff30;">
+      <div><i class="fas fa-check-circle"></i> 1000+ Projects Delivered</div>
+      <div><i class="fas fa-tools"></i> In-house Manufacturing Unit</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Specialized Services</h2>
+    <div class="section-sub">Precision metal craft for residential, commercial & industrial needs — delivered with pride.</div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon"><i class="fas fa-fence"></i></div><h3>S.S. Railings</h3><p>Stainless steel railings, modern & durable designs for stairs, balconies.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-archway"></i></div><h3>Gate & Ornamental Grills</h3><p>Custom decorative gates, window grills, artistic ironwork.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-door-closed"></i></div><h3>Rolling Shutters</h3><p>Heavy-duty manual & motorized rolling shutters for shops & warehouses.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-draw-polygon"></i></div><h3>Shutter Gates & Collapsible Gates</h3><p>Space-saving collapsible gates and shutter gates, ideal for storefronts.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-door-open"></i></div><h3>Sliding Doors</h3><p>Smooth, robust sliding door systems, steel framed & elegant.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-hard-hat"></i></div><h3>Truss Work with Erection</h3><p>Industrial truss fabrication, shed erection, structural steel solutions.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-landmark"></i></div><h3>Casting Railings</h3><p>Cast iron railings, vintage and modern patterns, high strength.</p></div>
+      <div class="service-card"><div class="service-icon"><i class="fas fa-gate"></i></div><h3>Casting Gates</h3><p>Ornamental cast iron gates, customized for villas & compounds.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="whyus" class="section whyus">
+  <div class="container">
+    <h2 class="section-title">Why Choose SS FABRICATORS?</h2>
+    <div class="section-sub">Experienced craftsmanship, timely erection & complete customer satisfaction.</div>
+    <div class="flex-features">
+      <div class="feature"><i class="fas fa-ruler-combined"></i><h3>Precision Design</h3><p>CAD drawings & custom measurements</p></div>
+      <div class="feature"><i class="fas fa-truck-fast"></i><h3>On-site Erection</h3><p>Complete installation support for truss and gate works</p></div>
+      <div class="feature"><i class="fas fa-hand-holding-heart"></i><h3>Quality Materials</h3><p>High-grade SS, MS, cast iron + anti-rust coating</p></div>
+      <div class="feature"><i class="fas fa-phone-alt"></i><h3>24/7 Support</h3><p>Direct contact with owner K.Shiva for urgent needs</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3><i class="fas fa-address-card"></i> Get in Touch</h3>
+        <div class="info-row"><i class="fas fa-user-circle"></i> <span><strong>Owner:</strong> K. Shiva (Proprietor)</span></div>
+        <div class="info-row"><i class="fas fa-phone-alt"></i> <span><strong>📞 Call:</strong> <a href="tel:9620712222">9620712222</a> &nbsp;|&nbsp; <a href="tel:9591712222">9591712222</a></span></div>
+        <div class="info-row"><i class="fas fa-envelope"></i> <span><strong>Email:</strong> <a href="mailto:ssfabricators7779@gmail.com">ssfabricators7779@gmail.com</a></span></div>
+        <div class="info-row"><i class="fas fa-map-pin"></i> <span><strong>📍 Workshop & Office:</strong> J.P. Nagar 8th Phase, Near Shankarnag Circle, Next to Post Office, Bangalore - 560078</span></div>
+        <div class="address-highlight">
+          <i class="fas fa-location-dot"></i> Landmark: <strong>Shankarnag Circle</strong> | Just beside the Post Office, easy access from main road.
+        </div>
+        <div style="margin-top: 24px;">
+          <a href="mailto:ssfabricators7779@gmail.com?subject=Enquiry%20about%20fabrication" class="btn-primary" style="background:white; color:#0b2b26; margin-right:12px;"><i class="fas fa-paper-plane"></i> Send Inquiry</a>
+          <a href="https://wa.me/919620712222?text=Hello%20SS%20FABRICATORS%2C%20I%20need%20a%20quote%20for%20iron%20fabrication" target="_blank" class="btn-outline" style="border-color:white;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <h4 style="margin-bottom: 12px; color:#f5b042;"><i class="fas fa-map-marked-alt"></i> Our Location</h4>
+        <!-- Embedded map using the specific Google Maps link provided (SS Fabricators) -->
+        <iframe 
+          class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15550.147787417072!2d77.5805607!3d12.8774123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15beaf67282b%3A0xa881c01b311c0843!2sSS%20Fabricators!5e0!3m2!1sen!2sin!4v1718010000000!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://www.google.com/maps/place/SS+Fabricators/@12.8774123,77.5805607,20z/data=!4m6!3m5!1s0x3bae15beaf67282b:0xa881c01b311c0843!8m2!3d12.8774123!4d77.5805607!16s%2Fg%2F11t_h1gqrk?authuser=0&entry=ttu" target="_blank" class="btn-map">
+          <i class="fas fa-external-link-alt"></i> View on Google Maps
+        </a>
+        <p style="font-size:0.75rem; margin-top: 14px;">📍 Exact: Next to Post Office, Shankarnag Circle, J.P Nagar 8th Phase</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2025 SS FABRICATORS | Iron & Steel Fabrication Experts | Designed for K. Shiva | Bangalore</p>
+    <p style="margin-top: 8px;"><i class="fas fa-hard-hat"></i> S.S. Railing | Gates | Rolling Shutters | Collapsible Gate | Sliding Doors | Truss Erection | Casting Railings & Gates</p>
+    <p style="margin-top: 6px; font-size:0.75rem;">📍 J.P. Nagar 8th Phase, Near Shankarnag Circle, Next to Post Office, Bengaluru - 560078</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919620712222?text=Hi%20SS%20FABRICATORS%2C%20I%20need%20details%20about%20your%20fabrication%20services" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SS FABRICATORS",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "J.P. Nagar 8th Phase, near Shankarnag Circle, Next to Post Office",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "postalCode": "560078",
+    "addressCountry": "IN"
+  },
+  "telephone": "+919620712222",
+  "email": "ssfabricators7779@gmail.com",
+  "founder": "K. Shiva",
+  "priceRange": "₹₹",
+  "openingHours": "Mo-Sa 09:00-19:00"
+}
+</script>
+</body>
+</html>
